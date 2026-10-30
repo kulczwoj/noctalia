@@ -1426,7 +1426,7 @@ std::string WorkspacesWidget::workspaceLabel(const Workspace& workspace, std::si
       label = std::to_string(displayIndex + 1);
     }
   } else {
-    label = !workspace.name.empty() ? workspace.name : workspace.id;
+    label = workspace.name;
   }
 
   // Only truncate non-numeric labels (words like "VESKTOP" → "VE").
