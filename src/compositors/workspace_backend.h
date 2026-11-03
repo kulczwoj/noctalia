@@ -19,6 +19,7 @@ struct zdwl_ipc_manager_v2;
 struct Workspace {
   std::string id;
   std::string name;
+  std::string label; // display-only
   std::vector<std::uint32_t> coordinates;
   std::uint32_t index = 0;
   bool active = false;

@@ -195,6 +195,8 @@ void NiriWorkspaceBackend::apply(std::vector<Workspace>& workspaces, const std::
         workspaces[i].index = matches[i]->idx;
       }
       workspaces[i].occupied = m_occupancy.contains(matches[i]->id) && m_occupancy.at(matches[i]->id) > 0;
+      // real niri name; set empty for unnamed workspaces
+      workspaces[i].label = matches[i]->name.empty() ? " " : matches[i]->name;
     } else {
       workspaces[i].index = 0;
       workspaces[i].occupied = false;
